@@ -2,20 +2,20 @@ install.packages("tidyverse")
 
 library(tidyverse)
 
-# read the csv into a dataframe
+# leggi il csv in un dataframe
 my_df <- read.csv("Corpora/BridgertonTweet.csv", stringsAsFactors = F)
 
-# explore the dataframe
+# Presa visione del dataframe
 View(my_df)
 
-# see all available metadata
+# Visione dei metadata
 colnames(my_df)
 
-# count tweets per language
+# Conteggio tweet per lingua
 my_df %>% count(lang)
 
-# filter by language
+# Filtra il lignuaggio 
 en_df <- my_df %>% filter(lang == "en")
 
-#explore the English dataframe
+# Esplra il dataframe in inglese
 View(en_df)
